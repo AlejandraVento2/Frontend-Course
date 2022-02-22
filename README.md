@@ -26,7 +26,7 @@ data:
 
   const reduceMap = arr.reduce((previousItem: Person[], currentItem) => {
     const [first, last] = currentItem.split(' ');
-    const person = { firstname: capitalize(first) };
+    const person: Person = { firstname: capitalize(first) };
     if (last) person.lastname = capitalize(last);
     return [...previousItem,person]
   },[]);
