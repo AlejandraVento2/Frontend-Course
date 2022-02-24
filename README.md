@@ -1,158 +1,46 @@
-## Reduce exercises
+# Getting Started with Create React App
 
-Try to do the previous exercises of each chapter again, but this time use `reduce` instead of `map`/`filter`/`find`.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### 1. Transform names
+## Available Scripts
 
-Take this list of names and transform them into a list of objects using this type. Leave out the last name if they don't have any. Also capitalize the first letters of the first and last name.
+In the project directory, you can run:
 
-```ts
-  interface Person {
-    firstname: string;
-    lastname?: string;
-  }
-```
+### `yarn start`
 
-data:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```json
-  ["frodo baggins", "samwise gamgee", "gandalf", "aragorn", "legolas greenleaf", "gimli"]
-```
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-```ts
-  const arr = ['frodo baggins', 'samwise gamgee', 'gandalf', 'aragorn', 'legolas greenleaf', 'gimli'];
+### `yarn test`
 
-  const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-  const reduceMap = arr.reduce((previousItem: Person[], currentItem) => {
-    const [first, last] = currentItem.split(' ');
-    const person: Person = { firstname: capitalize(first) };
-    if (last) person.lastname = capitalize(last);
-    return [...previousItem,person]
-  },[]);
+### `yarn build`
 
-  console.log('reduceMap', reduceMap) // [{firstname: 'Frodo', lastname: 'Baggins'}, {firstname: 'Samwise', lastname: 'Gamgee'}, {firstname: 'Gandalf'}, {firstname: 'Aragorn'}, {firstname: 'Legolas', lastname: 'Greenleaf'}, {firstname: 'Gimli'}]
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### 2. Create JSX from an array
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-JSX is just JavaScript, so that means it works with the `map` method. Create a component that shows a list of pokemon names
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```json
-  [
-    {
-      "id": 1,
-      "name": "bulbasaur"
-    },
-    {
-      "id": 4,
-      "name": "charmander"
-    },
-    {
-      "id": 7,
-      "name": "squirtle"
-    }
-  ]
-```
+### `yarn eject`
 
-```tsx
-  const Page = () => (
-    <ul>
-      {pokemon.reduce((previousItem:any, currentItem) => {
-        return [...previousItem,<li key={currentItem.id}>{currentItem.name}</li>]
-      },[])}
-    </ul>
-  );
-```
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## Filter exercises
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### 1. Odd and even numbers
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Take the following array and filter out all odd numbers. The resulting array should only contain even numbers.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-```json
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-```
+## Learn More
 
-```ts
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-const reduceFilter = arr.reduce((previousItem:number[], currentItem) => {
-  if(currentItem % 2 == 0){
-      return [...previousItem,currentItem]
-  }else{
-      return previousItem
-  }
-},[]);
-
-console.log('reduceFilter',reduceFilter); // [2, 4, 6, 8, 10]
-```
-
-### 2. Chaining array functions
-
-Since functions like `map` and `filter` return arrays, you can chain them. Take the same numbers from the last exercise, multiply all of them by 3 and again filter out all odd numbers, leaving only the even number in the new array.
-
-```json
-  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-```
-
-```ts
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-  const reduceFilter = arr.reduce((previousItem:number[], currentItem) => {
-    let multipliedNumber = currentItem * 3
-    if(multipliedNumber % 2 == 0){
-        return [...previousItem,multipliedNumber]
-    }else{
-        return previousItem
-    }
-  },[]);
-
-  console.log('reduceFilter',reduceFilter); // [6, 12, 18, 24, 30]
-```
-### 3. Searching for a name
-
-Take the names from Lord of the Rings which we used in the `map` exercise en find all characters with an 'a' in their name.
-
-```json
-  ["frodo baggins", "samwise gamgee", "gandalf", "aragorn", "legolas greenleaf", "gimli"]
-```
-
-```ts
-  const arr = ['frodo baggins', 'samwise gamgee', 'gandalf', 'aragorn', 'legolas greenleaf', 'gimli'];
-
-  const reduceFilter = arr.reduce((previousItem:string[], currentItem) => {
-    if(currentItem.includes('a')){
-        return [...previousItem,currentItem]
-    }else{
-        return previousItem
-    }
-  },[]);
-
-  console.log('reduceFilter', reduceFilter) // ["frodo baggins", "samwise gamgee", "gandalf", "aragorn", "legolas greenleaf"]
-```
-
-## Find exercises
-
-### 1. Searching for a name again
-
-Just like the execise we did in filter, but now find the _last_ person in the array with the letter 'a' in his/her name.
-
-```json
-  ["frodo baggins", "samwise gamgee", "gandalf", "aragorn", "legolas greenleaf", "gimli"]
-```
-
-```ts
-  const arr = ['frodo baggins', 'samwise gamgee', 'gandalf', 'aragorn', 'legolas greenleaf', 'gimli'];
-
-  const reduceFind = arr.reduce((previousItem:string[] | undefined, currentItem) => {
-    if(currentItem.includes('a')){
-      return currentItem
-    }else{
-      return previousItem
-    }
-  },undefined);
-
-  console.log('reduceFind', reduceFind) // 'legolas greenleaf'
-```
+To learn React, check out the [React documentation](https://reactjs.org/).

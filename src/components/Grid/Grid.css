@@ -1,0 +1,44 @@
+.Grid-columns-container {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Grid-container {
+  background-color: white;
+  border: 5px solid black;
+  margin: 15px;
+  padding: 20px 15px;
+}
+
+.Grid-header {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 4fr 0fr 0fr 0fr;
+  gap: 15px;
+}
+
+.Grid-footer {
+  text-align: center;
+}
+
+.container-columns {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 2fr;
+}
+
+.Grid-left-container {
+  margin: 0px 15px;
+  padding: 10px 50px;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 0fr 0fr 0fr;
+}
+
+.Grid-right-container {
+  margin: 0px 15px;
+}
