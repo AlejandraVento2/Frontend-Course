@@ -1,0 +1,50 @@
+.character-principal-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px 50px;
+  margin: 30px 200px;
+}
+
+.character-attributes-img {
+  border: 10px solid rgb(154, 101, 204);
+  border-radius: 200px;
+  height: 200px;
+  width: 200px;
+  align-self: center;
+  background-color: white;
+  object-fit: scale-down;
+}
+
+#character-principal-img {
+  cursor: default;
+}
+
+#character-principal-img:hover {
+  animation: none;
+}
+
+.character-attributes-item {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  text-align: center;
+}
+
+.character-attribute-title {
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.character-quote {
+  color: darkblue;
+  font-weight: 500;
+}
+
+.legendary-quotes {
+  text-align: center;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}

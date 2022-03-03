@@ -1,0 +1,39 @@
+.Survey-subtitle {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.Survey-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.intern-container {
+  width: 500px;
+  background-color: white;
+  border-radius: 50px;
+  border: 10px solid rgb(154, 101, 204);
+  display: grid;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.Survey-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(154, 101, 204);
+  cursor: pointer;
+}
+
+.final-character {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

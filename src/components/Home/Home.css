@@ -1,0 +1,105 @@
+.Home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 50px;
+}
+
+.Home-character-item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.character-img {
+  border: 10px solid rgb(154, 101, 204);
+  border-radius: 50px;
+  height: 300px;
+  width: 200px;
+  object-fit: contain;
+  align-self: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+.character-img:hover {
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+.character-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: darkblue;
+  cursor: pointer;
+}
+
+@keyframes myAnim {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.survey-container {
+  align-items: center;
+  position: fixed;
+  display: flex;
+  box-sizing: border-box;
+  font-family: Rubik, 'sans-serif';
+  animation: 0.2s ease-out 0s 1 normal forwards running labRhU;
+  margin: 4px;
+  /* height: 110px; */
+  top: 0px;
+  left: 0px;
+  justify-content: center;
+  right: 0px;
+  text-align: center;
+}
+
+.survey {
+  background-color: rgb(82, 0, 68);
+  border-radius: 18px;
+  box-shadow: rgb(248 236 236 / 35%) 0px 0px 4px 0px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 900;
+  font-style: italic;
+  width: max-content;
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+
+.survey p {
+  background-color: rgb(82, 0, 68);
+  margin: auto;
+}
+
+.survey img {
+  background-color: rgb(82, 0, 68);
+  border-radius: 18px;
+  width: 100px;
+  height: 100%;
+  padding: 8px;
+}
+
+.home-title {
+  padding-top: 100px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: darkblue;
+  cursor: pointer;
+}
