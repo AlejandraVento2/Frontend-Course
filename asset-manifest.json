@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Frontend-Course/static/css/main.ec92403c.css",
+    "main.js": "/Frontend-Course/static/js/main.511f5401.js",
+    "static/js/787.59520b8b.chunk.js": "/Frontend-Course/static/js/787.59520b8b.chunk.js",
+    "static/media/Love's_Labours_Lost_in_Space_Poster.png": "/Frontend-Course/static/media/Love's_Labours_Lost_in_Space_Poster.f918e54e6fa06661bd6c.png",
+    "index.html": "/Frontend-Course/index.html",
+    "main.ec92403c.css.map": "/Frontend-Course/static/css/main.ec92403c.css.map",
+    "main.511f5401.js.map": "/Frontend-Course/static/js/main.511f5401.js.map",
+    "787.59520b8b.chunk.js.map": "/Frontend-Course/static/js/787.59520b8b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec92403c.css",
+    "static/js/main.511f5401.js"
+  ]
+}
